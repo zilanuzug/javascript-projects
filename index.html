@@ -1,0 +1,84 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Öğrenci Planlayıcısı</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <header class="header">
+            <div class="logo">✦</div>
+            <p class="eyebrow">KİŞİSEL ÇALIŞMA ALANIN</p>
+            <h1>Öğrenci Planlayıcısı</h1>
+            <p class="subtitle">Planını oluştur, hedeflerine adım adım ilerle.</p>
+        </header>
+
+        <section class="stats">
+            <article class="stat-card">
+                <span>Toplam görev</span>
+                <strong id="toplamGorev">0</strong>
+            </article>
+            <article class="stat-card">
+                <span>Devam eden</span>
+                <strong id="aktifGorev">0</strong>
+            </article>
+            <article class="stat-card">
+                <span>Tamamlanan</span>
+                <strong id="bitmisGorev">0</strong>
+            </article>
+        </section>
+
+        <section class="panel">
+            <h2>Yeni görev oluştur</h2>
+
+            <form id="gorevFormu">
+                <label for="gorevAdi">Görev adı</label>
+                <input id="gorevAdi" type="text"
+                       placeholder="Örn. JavaScript tekrarını yap"
+                       maxlength="100" required>
+
+                <div class="form-row">
+                    <div>
+                        <label for="kategori">Kategori</label>
+                        <select id="kategori">
+                            <option value="Ders">Ders</option>
+                            <option value="Proje">Proje</option>
+                            <option value="Sınav">Sınav</option>
+                            <option value="Kişisel">Kişisel</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="tarih">Son tarih</label>
+                        <input id="tarih" type="date">
+                    </div>
+                </div>
+
+                <button class="primary-button" type="submit">
+                    + Görev Ekle
+                </button>
+            </form>
+        </section>
+
+        <section class="task-section">
+            <div class="task-heading">
+                <h2>Görevlerim</h2>
+                <select id="filtre" aria-label="Görevleri filtrele">
+                    <option value="tumu">Tüm görevler</option>
+                    <option value="aktif">Devam edenler</option>
+                    <option value="tamamlanan">Tamamlananlar</option>
+                </select>
+            </div>
+
+            <p id="bosMesaj">Henüz görev yok. İlk görevini ekleyebilirsin.</p>
+            <ul id="gorevListesi"></ul>
+        </section>
+
+        <footer>Öğrenci Planlayıcısı · JavaScript Final Projesi</footer>
+    </main>
+</body>
+</html>

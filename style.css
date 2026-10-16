@@ -1,0 +1,292 @@
+
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    font-family: Arial, sans-serif;
+    color: #272442;
+    background: #f5f5fc;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 32px 16px;
+    background: linear-gradient(135deg, #f2f0ff, #fafaff);
+}
+
+.container {
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.logo {
+    display: inline-grid;
+    place-items: center;
+    width: 54px;
+    height: 54px;
+    border-radius: 17px;
+    background: #6755d9;
+    color: white;
+    font-size: 30px;
+}
+
+.eyebrow {
+    margin: 16px 0 8px;
+    color: #6755d9;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+h1 {
+    margin: 0;
+    font-size: clamp(27px, 5vw, 36px);
+}
+
+.subtitle {
+    color: #77758d;
+    line-height: 1.6;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+.stat-card,
+.panel,
+.task-section {
+    background: white;
+    border: 1px solid #ebe9f5;
+    border-radius: 16px;
+    box-shadow: 0 8px 25px rgba(47, 39, 97, 0.05);
+}
+
+.stat-card {
+    padding: 18px;
+}
+
+.stat-card span {
+    display: block;
+    color: #77758d;
+    font-size: 13px;
+}
+
+.stat-card strong {
+    display: block;
+    margin-top: 10px;
+    font-size: 29px;
+    color: #6755d9;
+}
+
+.panel,
+.task-section {
+    padding: 24px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    margin: 0 0 20px;
+    font-size: 19px;
+}
+
+label {
+    display: block;
+    margin: 14px 0 7px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+input,
+select {
+    width: 100%;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #dedced;
+    border-radius: 9px;
+    background: white;
+    color: #272442;
+    font: inherit;
+}
+
+input:focus,
+select:focus {
+    outline: 2px solid #b7adff;
+    border-color: transparent;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 14px;
+}
+
+.primary-button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 13px;
+    border: none;
+    border-radius: 9px;
+    background: #6755d9;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.primary-button:hover {
+    background: #5140c1;
+}
+
+.task-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.task-heading h2 {
+    margin-bottom: 0;
+}
+
+.task-heading select {
+    width: auto;
+    max-width: 170px;
+    font-size: 13px;
+}
+
+#bosMesaj {
+    padding: 24px 0;
+    text-align: center;
+    color: #858299;
+    font-size: 14px;
+}
+
+#bosMesaj[hidden] {
+    display: none;
+}
+
+#gorevListesi {
+    list-style: none;
+    padding: 0;
+    margin: 16px 0 0;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 0;
+    border-bottom: 1px solid #f0eff6;
+}
+
+.task-item:last-child {
+    border-bottom: none;
+}
+
+.task-check {
+    width: 18px;
+    height: 18px;
+    flex: 0 0 18px;
+    accent-color: #6755d9;
+    cursor: pointer;
+}
+
+.task-content {
+    flex: 1;
+    min-width: 0;
+}
+
+.task-name {
+    overflow-wrap: anywhere;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.task-meta {
+    margin-top: 7px;
+    color: #858299;
+    font-size: 12px;
+}
+
+.task-item.done .task-name {
+    color: #9290a3;
+    text-decoration: line-through;
+}
+
+.category {
+    display: inline-block;
+    margin-right: 8px;
+    padding: 4px 7px;
+    border-radius: 6px;
+    background: #efedff;
+    color: #5b49c8;
+}
+
+.delete-button {
+    border: none;
+    border-radius: 8px;
+    padding: 8px 10px;
+    background: #fff0f0;
+    color: #b93d4b;
+    cursor: pointer;
+}
+
+.delete-button:hover {
+    background: #ffe0e0;
+}
+
+footer {
+    padding: 10px;
+    text-align: center;
+    color: #89869d;
+    font-size: 12px;
+}
+
+@media (max-width: 520px) {
+    .stats {
+        gap: 8px;
+    }
+
+    .stat-card {
+        padding: 12px;
+    }
+
+    .stat-card span {
+        font-size: 11px;
+    }
+
+    .stat-card strong {
+        font-size: 24px;
+    }
+
+    .panel,
+    .task-section {
+        padding: 18px;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+        gap: 0;
+    }
+
+    .task-heading {
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .task-heading select {
+        width: 100%;
+        max-width: none;
+    }
+}
