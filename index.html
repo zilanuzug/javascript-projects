@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Öğrenci Not Sistemi</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="container">
+        <header>
+            <div class="logo">🎓</div>
+            <h1>Öğrenci Not Sistemi</h1>
+            <p>Sınav notlarını hesapla, başarı durumunu öğren.</p>
+        </header>
+
+        <section class="card">
+            <h2>Not Bilgileri</h2>
+
+            <label for="vize">Vize notu</label>
+            <input id="vize" type="number" min="0" max="100"
+                   placeholder="0 - 100">
+
+            <label for="final">Final notu</label>
+            <input id="final" type="number" min="0" max="100"
+                   placeholder="0 - 100">
+
+            <button id="hesapla">Ortalama Hesapla</button>
+
+            <p id="hata" role="alert"></p>
+
+            <div id="sonuc" class="result" aria-live="polite" hidden>
+                <p>Ders ortalaman</p>
+                <div id="ortalama" class="score">0</div>
+                <h3 id="durum"></h3>
+                <p id="detay"></p>
+            </div>
+        </section>
+
+        <footer>
+            JavaScript ile geliştirilmiştir · Öğrenci Projesi
+        </footer>
+    </main>
+</body>
+</html>
