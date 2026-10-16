@@ -1,0 +1,41 @@
+
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yapılacaklar Listem</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main class="app">
+        <header>
+            <span class="icon">✓</span>
+            <h1>Yapılacaklar Listem</h1>
+            <p>Planla, tamamla, ilerle.</p>
+        </header>
+
+        <form id="gorevFormu">
+            <input
+                id="gorevInput"
+                type="text"
+                placeholder="Yeni bir görev yaz..."
+                maxlength="120"
+                autocomplete="off"
+                required
+            >
+            <button type="submit">+ Ekle</button>
+        </form>
+
+        <div class="summary">
+            <span id="gorevSayisi">0 görev</span>
+            <span id="tamamlananSayisi">0 tamamlandı</span>
+        </div>
+
+        <ul id="gorevListesi"></ul>
+
+        <p id="bosMesaj">Henüz görev eklemedin. İlk görevini ekle!</p>
+    </main>
+</body>
+</html>

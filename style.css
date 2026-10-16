@@ -1,0 +1,156 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #e8edff, #f8f7ff);
+    color: #252747;
+}
+
+.app {
+    width: 100%;
+    max-width: 560px;
+    padding: 32px;
+    border-radius: 22px;
+    background: white;
+    box-shadow: 0 15px 45px rgba(42, 48, 100, 0.12);
+}
+
+header {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    border-radius: 16px;
+    background: #e8e5ff;
+    color: #6558d9;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+h1 {
+    margin-bottom: 8px;
+    font-size: 27px;
+}
+
+header p {
+    color: #777b96;
+}
+
+form {
+    display: flex;
+    gap: 10px;
+}
+
+input {
+    flex: 1;
+    min-width: 0;
+    padding: 14px;
+    border: 1px solid #dfe1ef;
+    border-radius: 10px;
+    font-size: 15px;
+}
+
+button {
+    padding: 12px 18px;
+    border: none;
+    border-radius: 10px;
+    background: #6558d9;
+    color: white;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #5144c3;
+}
+
+.summary {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 24px 0 14px;
+    color: #777b96;
+    font-size: 13px;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 14px 0;
+    border-bottom: 1px solid #eeeeF5;
+}
+
+.task input {
+    flex: none;
+    width: 18px;
+    height: 18px;
+    accent-color: #6558d9;
+    cursor: pointer;
+}
+
+.task-text {
+    flex: 1;
+    overflow-wrap: anywhere;
+}
+
+.task.completed .task-text {
+    color: #999;
+    text-decoration: line-through;
+}
+
+.delete {
+    padding: 8px 10px;
+    background: #fff0f0;
+    color: #c43d4b;
+    font-size: 13px;
+}
+
+.delete:hover {
+    background: #ffe0e0;
+}
+
+#bosMesaj {
+    text-align: center;
+    padding: 20px 0;
+    color: #888ba3;
+}
+
+@media (max-width: 450px) {
+    .app {
+        padding: 22px;
+    }
+
+    h1 {
+        font-size: 23px;
+    }
+
+    form {
+        flex-direction: column;
+    }
+
+    form button {
+        width: 100%;
+    }
+}
